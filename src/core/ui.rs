@@ -162,7 +162,7 @@ fn update(
     player_stats: Query<&Player>
 ){
     if let Ok(stats) = player_stats.get_single(){
-        blood_e.single_mut().index = ((1. - stats.hp as f32 / stats.max_hp as f32) * 20.).round() as usize % 20;
+        blood_e.single_mut().index = ((1. - (stats.hp as f32 / stats.max_hp as f32)) * 20.).round() as usize % 20;
     }
     let (mut atlas, mut image) = daynight_e.single_mut();
     let t = (get_local_time_f(time.elapsed_seconds()) + 0.75) % 1.;

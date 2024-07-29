@@ -17,8 +17,8 @@ pub fn lvl_up(
                 justify_items: JustifyItems::Start,
                 justify_content: JustifyContent::Start,
                 flex_direction: FlexDirection::Column,
-                width: Val::Px(500.),
-                height: Val::Px(800.),
+                width: Val::Px(200.),
+                height: Val::Px(300.),
                 ..default()
             },
             image: UiImage::from(asset_server.load("scroll.png")),
@@ -54,11 +54,11 @@ fn spawn_button(
         style: Style {
             top: Val::Percent(25.),
             left: Val::Percent(20.),
-            width: Val::Px(150.),
-            height: Val::Px(30.),
+            width: Val::Px(190. / 2.5),
+            height: Val::Px(30. / 2.5),
             justify_items: JustifyItems::Center,
             justify_content: JustifyContent::Center,
-            margin: UiRect::bottom(Val::Px(10.0)),
+            margin: UiRect::bottom(Val::Px(5.0)),
             ..default()
         },
         image: UiImage::from(asset_server.load("button.png")),
@@ -74,7 +74,7 @@ fn spawn_button(
                 ..default()
             },
             text: Text {
-                sections: vec![TextSection::new(text, TextStyle { font, font_size: 16., color: Color::srgb_u8(169, 96, 45) })],
+                sections: vec![TextSection::new(text, TextStyle { font, font_size: 16. / 2., color: Color::srgb_u8(169, 96, 45) })],
                 ..default()
             },
             ..default()
@@ -160,7 +160,7 @@ pub fn spawn_death_text(
             ..default()
         },
         text: Text {
-            sections: vec![TextSection::new(text, TextStyle { font: font.clone(), font_size: 64., color: Color::WHITE })],
+            sections: vec![TextSection::new(text, TextStyle { font: font.clone(), font_size: 64. / 2.5, color: Color::WHITE })],
             ..default()
         },
         ..default()
@@ -172,7 +172,7 @@ pub fn spawn_death_text(
             ..default()
         },
         text: Text {
-            sections: vec![TextSection::new((time as i32).to_string(), TextStyle { font: font.clone(), font_size: 50., color: Color::WHITE })],
+            sections: vec![TextSection::new((time as i32).to_string(), TextStyle { font: font.clone(), font_size: 50. / 2.5, color: Color::WHITE })],
             ..default()
         },
         ..default()
@@ -186,7 +186,7 @@ pub fn spawn_death_text(
                 ..default()
             },
             text: Text {
-                sections: vec![TextSection::new("But the next Vampire\nis looking for roses!", TextStyle { font: font.clone(), font_size: 40., color: Color::WHITE })],
+                sections: vec![TextSection::new("But the next Vampire\nis looking for roses!", TextStyle { font: font.clone(), font_size: 40. / 2.5, color: Color::WHITE })],
                 ..default()
             },
             ..default()
@@ -199,7 +199,7 @@ pub fn spawn_death_text(
                 ..default()
             },
             text: Text {
-                sections: vec![TextSection::new("Till the next cycle", TextStyle { font: font.clone(), font_size: 40., color: Color::WHITE })],
+                sections: vec![TextSection::new("Till the next cycle", TextStyle { font: font.clone(), font_size: 40. / 2.5, color: Color::WHITE })],
                 ..default()
             },
             ..default()
@@ -219,7 +219,7 @@ pub fn spawn_death_text(
             ..default()
         },
         text: Text {
-            sections: vec![TextSection::new(format!("Roses Collected: {} / {}", collected, NUM_ROSES), TextStyle { font: font.clone(), font_size: 40., color: Color::WHITE })],
+            sections: vec![TextSection::new(format!("Roses Collected: {} / {}", collected, NUM_ROSES), TextStyle { font: font.clone(), font_size: 40. / 2.5, color: Color::WHITE })],
             ..default()
         },
         ..default()
