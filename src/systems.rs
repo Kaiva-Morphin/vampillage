@@ -166,8 +166,8 @@ pub fn spawn_starter_screen(
                 justify_content: JustifyContent::Center,
                 justify_items: JustifyItems::Center,
                 flex_direction: FlexDirection::Column,
-                width: Val::Px(200.),
-                height: Val::Px(300.),
+                width: Val::Px(400.),
+                height: Val::Px(600.),
                 ..default()
             },
             image: UiImage::from(asset_server.load("scroll.png")),
