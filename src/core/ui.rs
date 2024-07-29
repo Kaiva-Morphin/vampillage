@@ -145,7 +145,6 @@ fn on_resize_system(
     mut resize_reader: EventReader<WindowResized>,
     mut ui_style: Query<(&mut Style, &UiImageSize), With<PlayerUINode>>,
 ) {
-    return;
     for e in resize_reader.read() {
         for (mut style, size) in ui_style.iter_mut() {
             let size = size.size();
