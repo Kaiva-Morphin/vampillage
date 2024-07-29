@@ -26,7 +26,7 @@ use systems::*;
 
 pub struct AppPlugin;
 
-const NUM_ROSES: u32 = 6;
+const NUM_ROSES: u32 = 3;
 
 impl Plugin for AppPlugin {
     fn build(&self, app: &mut App) {

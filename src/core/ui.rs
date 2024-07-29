@@ -53,6 +53,8 @@ fn setup(
     commands.spawn((
         ImageBundle {
             style: Style{
+                width: Val::Px(2. * 110.),
+                height: Val::Px(2. * 23.),
                 justify_self: JustifySelf::Center,
                 align_self: AlignSelf::End,
                 justify_content: JustifyContent::SpaceBetween,
@@ -85,6 +87,8 @@ fn setup(
                         ImageBundle{
                             image: UiImage::new(asset_server.load("ui/daynight.png")),
                             style: Style{
+                                width: Val::Px(44.),
+                                height: Val::Px(44.),
                                 justify_self: JustifySelf::End,
                                 ..default()
                             },
@@ -113,6 +117,8 @@ fn setup(
                                 ImageBundle{
                                     image: UiImage::new(asset_server.load("ui/blood.png")),
                                     style: Style{
+                                        width: Val::Px(44.),
+                                        height: Val::Px(44.),
                                         justify_self: JustifySelf::Start,
                                         ..default()
                                     },
@@ -139,6 +145,7 @@ fn on_resize_system(
     mut resize_reader: EventReader<WindowResized>,
     mut ui_style: Query<(&mut Style, &UiImageSize), With<PlayerUINode>>,
 ) {
+    return;
     for e in resize_reader.read() {
         for (mut style, size) in ui_style.iter_mut() {
             let size = size.size();
